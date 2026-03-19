@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lexend", "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lexend", "Outfit", sans-serif;
+  
+  --color-grey-dark: #121212;
+  --color-grey-medium: #4a4a4a;
+  --color-grey-light: #fcfaf7;
+  --color-secondary: #ff4e00;
+}
+
+@layer utilities {
+  .liquid-effect {
+    filter: url('#liquid-goo');
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+  
+  body {
+    @apply bg-grey-light text-grey-dark antialiased;
+    font-family: var(--font-sans);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-grey-light;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-grey-dark/20 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-grey-dark/40;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.glass-pill {
+  @apply bg-white/80 backdrop-blur-md border border-white/20 rounded-full;
+}

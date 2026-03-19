@@ -1,0 +1,9 @@
+{
+  "name": "Layered Clothing",
+  "description": "A high-end men's fashion e-commerce experience featuring an AI Size Guide, personalized outfit recommendations, and a curated streetwear collection.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
